@@ -27,7 +27,7 @@ iz3(String) :-
 	count_middle(Codes, Middle),
 	write("Answer: "), write(Middle), nl, !.
 
-% Counting punctuation marks
+%Counting punctuation marks
 count_middle(String, Middle) :-
 	count_middle_(String, 0, 0, Middle).
 
