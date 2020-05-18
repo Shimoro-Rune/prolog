@@ -163,7 +163,7 @@ lineOld(L,X,DataIn,DataOut):- write('В действительности Ваш персонаж стар? (y/n/
         writeln(X).
 
 %Sannin
-lineSannin(L,X,DataIn,DataOut):- write('Является ли Ваш персонаж одних из трех Великих Саннинов? (y/n/Idk)\n'),
+lineSannin(L,X,DataIn,DataOut):- write('Является/Являлся ли Ваш персонаж одним из трех Великих Саннинов? (y/n/Idk)\n'),
         read(Sannin),
         list('sannin',N),
         (check(Sannin)->intersection(L,N,X),DataOut=['sannin'|DataIn];
