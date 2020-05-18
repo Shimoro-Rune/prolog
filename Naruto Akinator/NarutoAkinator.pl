@@ -15,8 +15,8 @@ presentation:-write('  _  _                _             _    _   _           _ 
               write(' |  \\ |/ _` |  _|| / |  _/ _ \\    / _ \\ | / / |   \\/ _` |  _/ _ \\  _| \n'),
               write(' |_|\\_|\\__,_|_|  \\___|\\__\\___/   /_/ \\_\\|_\\_\\_|_||_\\__,_|\\__\\___/_|   \n'),
               write('======================================================================\n'),
-              write('                     Welcome to a Naruto Akinator!                    \n'),
-              write('         Think about the character, and I\'ll try to guess it!        \n'),
+              write('                  Добро пожаловать в Акинатор Наруто!\n'),
+              write('            Загадайте персонажа, и я попробую угадать его!\n'),
               write('======================================================================\n\n').
 
 %Quest
@@ -51,10 +51,10 @@ quest(L,Aux14,DataNew,DataNew14):-lineFemale(L,Aux0,DataNew,DataNew0),
               lineSharingan(Aux13,Aux14,DataNew13,DataNew14),
               solution(Aux14).
 %Guessing
-guessing(List,DataNew):-length(List,0)->write('I don\'t know this character, write it in quotes:'),read(New),addCharacter(New,DataNew);
-                               write('I don\'t know this character, but I have some variants: '),
+guessing(List,DataNew):-length(List,0)->write('Я не знаю этого персонажа, пожалуйста, напишите его имя в кавычках:'),read(New),addCharacter(New,DataNew);
+                               write('Я не знаю, что это за персонаж, но у меня есть несколько вариантов: '),
                                write(List),
-                               write('\n Do u wanna start again?(y/n)\n'),
+                               write('\n Хотите сыграть снова?(y/n)\n'),
                                read(Answer),
                                leave(Answer);
                                write('').
@@ -73,7 +73,7 @@ updateList(X,New):-list(X,Y),Z=[New|Y],
                           told.
 
 %Female
-lineFemale(L,X,DataIn,DataOut):- write("Is your character a female? (y/n/Idk)\n"),
+lineFemale(L,X,DataIn,DataOut):- write("Ваш персонаж женского пола? (y/n/Idk)\n"),
         read(Female),
         list('female',T),
         (check(Female)->intersection(L,T,X),DataOut=['female'|DataIn];
@@ -83,7 +83,7 @@ lineFemale(L,X,DataIn,DataOut):- write("Is your character a female? (y/n/Idk)\n"
         writeln(X).
         
 %Uzumaki
-lineUzumaki(L,X,DataIn,DataOut):- write('Is your character a member of the Uzumaki family? (y/n/Idk)\n'),
+lineUzumaki(L,X,DataIn,DataOut):- write('Носит ли Ваш персонаж фамилию Узумаки? (y/n/Idk)\n'),
         read(Uzumaki),
         list('uzumaki',F),
         (check(Uzumaki)->intersection(L,F,X),DataOut=['uzumaki'|DataIn];
@@ -93,7 +93,7 @@ lineUzumaki(L,X,DataIn,DataOut):- write('Is your character a member of the Uzuma
         writeln(X).
         
 %Blond
-lineBlond(L,X,DataIn,DataOut):- write('Does your character have yellow/white hair? (y/n/Idk)\n'),
+lineBlond(L,X,DataIn,DataOut):- write('У Вашего персонажа светлые волосы? (y/n/Idk)\n'),
         read(Blond),
         list('blond',V),
         (check(Blond)->intersection(L,V,X),DataOut=['blond'|DataIn];
@@ -103,7 +103,7 @@ lineBlond(L,X,DataIn,DataOut):- write('Does your character have yellow/white hai
         writeln(X).
         
 %Dead
-lineDead(L,X,DataIn,DataOut):- write('Is your character dead? (y/n/Idk)\n'),
+lineDead(L,X,DataIn,DataOut):- write('Ваш персонаж мертв? (y/n/Idk)\n'),
         read(Dead),
         list('dead',A),
         (check(Dead)->intersection(L,A,X),DataOut=['dead'|DataIn];
@@ -113,7 +113,7 @@ lineDead(L,X,DataIn,DataOut):- write('Is your character dead? (y/n/Idk)\n'),
         writeln(X).
         
 %Beast
-lineBeast(L,X,DataIn,DataOut):- write('Does your character have a beast friend? (y/n/Idk)\n'),
+lineBeast(L,X,DataIn,DataOut):- write('У Вашего персонажа есть спутник, внешне напоминающий/являющийся животным? (y/n/Idk)\n'),
         read(Beast),
         list('beast',E),
         (check(Beast)->intersection(L,E,X),DataOut=['beast'|DataIn];
@@ -123,7 +123,7 @@ lineBeast(L,X,DataIn,DataOut):- write('Does your character have a beast friend? 
         writeln(X).
 
 %Konoha
-lineKonoha(L,X,DataIn,DataOut):- write('Was your character born or lives in Konoha? (y/n/Idk)\n'),
+lineKonoha(L,X,DataIn,DataOut):- write('Родина Вашего персонажа - Коноха? (y/n/Idk)\n'),
         read(Konoha),
         list('konoha',M),
         (check(Konoha)->intersection(L,M,X),DataOut=['konoha'|DataIn];
@@ -133,7 +133,7 @@ lineKonoha(L,X,DataIn,DataOut):- write('Was your character born or lives in Kono
         writeln(X).
 
 %Animal
-lineAnimal(L,X,DataIn,DataOut):- write('Does your character look like an animal? (y/n/Idk)\n'),
+lineAnimal(L,X,DataIn,DataOut):- write('Ваш персонаж похож на животное? (y/n/Idk)\n'),
         read(Animal),
         list('animal',Fan),
         (check(Animal)->intersection(L,Fan,X),DataOut=['animal'|DataIn];
@@ -143,7 +143,7 @@ lineAnimal(L,X,DataIn,DataOut):- write('Does your character look like an animal?
         writeln(X).
         
 %Sharingan
-lineSharingan(L,X,DataIn,DataOut):- write('Does your character have a sharingan? (y/n/Idk)\n'),
+lineSharingan(L,X,DataIn,DataOut):- write('У Вашего персонажа имеется шаринган? (y/n/Idk)\n'),
         read(Sharingan),
         list('sharingan',G),
         (check(Sharingan)->intersection(L,G,X),DataOut=['sharingan'|DataIn];
@@ -153,7 +153,7 @@ lineSharingan(L,X,DataIn,DataOut):- write('Does your character have a sharingan?
         writeln(X).
 
 %Old
-lineOld(L,X,DataIn,DataOut):- write('Is your character really old? (y/n/Idk)\n'),
+lineOld(L,X,DataIn,DataOut):- write('В действительности Ваш персонаж стар? (y/n/Idk)\n'),
         read(Old),
         list('old',R),
         (check(Old)->intersection(L,R,X),DataOut=['old'|DataIn];
@@ -163,7 +163,7 @@ lineOld(L,X,DataIn,DataOut):- write('Is your character really old? (y/n/Idk)\n')
         writeln(X).
 
 %Sannin
-lineSannin(L,X,DataIn,DataOut):- write('Is your character one of the three great Sannins? (y/n/Idk)\n'),
+lineSannin(L,X,DataIn,DataOut):- write('Является ли Ваш персонаж одних из трех Великих Саннинов? (y/n/Idk)\n'),
         read(Sannin),
         list('sannin',N),
         (check(Sannin)->intersection(L,N,X),DataOut=['sannin'|DataIn];
@@ -173,7 +173,7 @@ lineSannin(L,X,DataIn,DataOut):- write('Is your character one of the three great
         writeln(X).
 
 %Red
-lineRed(L,X,DataIn,DataOut):- write('Does your character have red/pink/orange hair? (y/n/Idk)\n'),
+lineRed(L,X,DataIn,DataOut):- write('Ваш персонаж - обладатель волос красного оттенка (рыжего/розового в том числе)? (y/n/Idk)\n'),
         read(Red),
         list('red',Ani),
         (check(Red)->intersection(L,Ani,X),DataOut=['red'|DataIn];
@@ -183,7 +183,7 @@ lineRed(L,X,DataIn,DataOut):- write('Does your character have red/pink/orange ha
         writeln(X).
 
 %Akatsuki
-lineAkatsuki(L,X,DataIn,DataOut):- write('Was your character in Akatsuki? (y/n/Idk)\n'),
+lineAkatsuki(L,X,DataIn,DataOut):- write('Является ли Ваш персонаж участником Акацуки? (y/n/Idk)\n'),
         read(Akatsuki),
         list('akatsuki',C),
         (check(Akatsuki)->intersection(L,C,X),DataOut=['akatsuki'|DataIn];
@@ -193,7 +193,7 @@ lineAkatsuki(L,X,DataIn,DataOut):- write('Was your character in Akatsuki? (y/n/I
         writeln(X).
 
 %Bidju (Bald)
-lineBidju(L,X,DataIn,DataOut):- write('Is your character a bidju? (y/n/Idk)\n'),
+lineBidju(L,X,DataIn,DataOut):- write('Ваш персонаж - биджу? (y/n/Idk)\n'),
         read(Bidju),
         list('bidju',B),
         (check(Bidju)->intersection(L,B,X),DataOut=['bidju'|DataIn];
@@ -203,7 +203,7 @@ lineBidju(L,X,DataIn,DataOut):- write('Is your character a bidju? (y/n/Idk)\n'),
         writeln(X).
         
 %Parent
-lineParent(L,X,DataIn,DataOut):- write('Has your character become a parent/trustee in Boruto: Naruto Next Generations? (y/n/Idk)\n'),
+lineParent(L,X,DataIn,DataOut):- write('Стал ли Ваш персонаж родителем в аниме Боруто: Новое поколение Наруто? (y/n/Idk)\n'),
         read(Parent),
         list('parent',Ca),
         (check(Parent)->intersection(L,Ca,X),DataOut=['parent'|DataIn];
@@ -213,7 +213,7 @@ lineParent(L,X,DataIn,DataOut):- write('Has your character become a parent/trust
         writeln(X).
         
 %Kage
-lineKage(L,X,DataIn,DataOut):- write('Was your character a kage? (y/n/Idk)\n'),
+lineKage(L,X,DataIn,DataOut):- write('Ваш персонаж был/является каге? (y/n/Idk)\n'),
         read(Kage),
         list('kage',Ar),
         (check(Kage)->intersection(L,Ar,X),DataOut=['kage'|DataIn];
@@ -224,11 +224,11 @@ lineKage(L,X,DataIn,DataOut):- write('Was your character a kage? (y/n/Idk)\n'),
 
         
 %Check if user wants to leave
-leave(R):-check(R)->play; write('Saliendo...'), abort.
-set(A):-check(A)-> write('\n Do u wanna start again?(y/n)\n'),
+leave(R):-check(R)->play; write('Хмм...'), abort.
+set(A):-check(A)-> write('\n Хотите сыграть снова?(y/n)\n'),
             read(Answer),
             leave(Answer);
-            write('The quests continue.\n').
+            write('Продолжаем игру.\n').
 			
 %Check the response given by the user
 check(X):-X='y';X='Yes';X='yes'.
@@ -239,9 +239,9 @@ first(F, [F|_]).
 
 %Check if already have the solution
 solution(X):-length(X,1)-> first(E,X),
-         write('Character u thought about: '),
+         write('Персонаж, которого Вы загадали: '),
          write(E),
-         write('\n Am I right?(y/n)\n'),
+         write('\n Я прав?(y/n)\n'),
          read(Success),
          set(Success);
          write('').

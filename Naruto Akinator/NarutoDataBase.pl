@@ -4,20 +4,20 @@ predicate_options:list([A|B], [A|C], D) :-
 
 :- dynamic list/2.
 
-list(bidju, ['Shukaku', 'Kurama']).
-list(sannin, ['Uzumaki Naruto', 'Uchiha Sasuke', 'Orochimaru', 'Haruno Sakura', 'Jiraiya', 'Tsunade']).
-list(sharingan, ['Uchiha Sasuke', 'Hatake Kakashi', 'Uchiha Madara']).
-list(animal, ['Shima', 'Shukaku', 'Kurama', 'Akamaru']).
-list(red, ['Gaara', 'Haruno Sakura', 'Terumii Mei', 'Uzumaki Kushina', 'Juugo', 'Nagato']).
-list(kage, ['Uzumaki Naruto', 'Hatake Kakashi', 'Gaara', 'Terumii Mei', 'Tsunade', 'Namikaze Minato']).
-list(dead, ['Uchiha Madara', 'Jiraiya', 'Uzumaki Kushina', 'Ootsutsuki Momoshiki', 'Namikaze Minato', 'Konan', 'Nagato']).
-list(akatsuki, ['Orochimaru', 'Juugo', 'Konan', 'Nagato']).
-list(old, ['Orochimaru', 'Jiraiya', 'Shima', 'Tsunade', 'Kurama', 'Shukaku']).
-list(konoha, ['Uzumaki Naruto', 'Uchiha Sasuke', 'Hatake Kakashi', 'Orochimaru', 'Uchiha Madara', 'Haruno Sakura', 'Jiraiya', 'Maito Gai', 'Yamanaka Ino', 'Nara Shikamaru', 'Tsunade', 'Uzumaki Kushina', 'Kurama', 'Inuzuka Kiba', 'Akamaru', 'Namikaze Minato', 'Uzumaki Menma']).
-list(parent, ['Uzumaki Naruto', 'Uchiha Sasuke', 'Gaara', 'Haruno Sakura', 'Yamanaka Ino', 'Nara Shikamaru', 'Temari']).
-list(beast, ['Uzumaki Naruto', 'Uchiha Sasuke', 'Hatake Kakashi', 'Orochimaru', 'Gaara', 'Haruno Sakura', 'Jiraiya', 'Temari', 'Tsunade', 'Inuzuka Kiba', 'Namikaze Minato', 'Uzumaki Menma']).
-list(blond, ['Uzumaki Naruto', 'Hatake Kakashi', 'Jiraiya', 'Yamanaka Ino', 'Temari', 'Tsunade', 'Ootsutsuki Momoshiki', 'Namikaze Minato']).
-list(uzumaki, ['Uzumaki Naruto', 'Uzumaki Kushina', 'Namikaze Minato', 'Uzumaki Menma']).
-list(female, ['Haruno Sakura', 'Yamanaka Ino', 'Temari', 'Terumii Mei', 'Shima', 'Tsunade', 'Uzumaki Kushina', 'Konan']).
-list(characters, ['Uzumaki Naruto', 'Uchiha Sasuke', 'Hatake Kakashi', 'Orochimaru', 'Uchiha Madara', 'Gaara', 'Haruno Sakura', 'Jiraiya', 'Maito Gai', 'Yamanaka Ino', 'Nara Shikamaru', 'Temari', 'Terumii Mei', 'Shima', 'Shukaku', 'Tsunade', 'Uzumaki Kushina', 'Kurama', 'Juugo', 'Inuzuka Kiba', 'Ootsutsuki Momoshiki', 'Akamaru', 'Namikaze Minato', 'Uzumaki Menma', 'Konan', 'Nagato']).
+list(parent, ['Узумаки Наруто', 'Учиха Саске', 'Гаара', 'Харуно Сакура', 'Яманако Ино', 'Нара Шикамару', 'Темари']).
+list(blond, ['Узумаки Наруто', 'Хатаки Какаши', 'Джирайя', 'Яманако Ино', 'Темари', 'Цунаде', 'Ооцуцуки Момошики', 'Намиказе Минато']).
+list(uzumaki, ['Узумаки Наруто', 'Узумаки Кушина', 'Намиказе Минато', 'Узумаки Менма']).
+list(female, ['Харуно Сакура', 'Яманако Ино', 'Темари', 'Теруми Мей', 'Шима', 'Цунаде', 'Узумаки Кушина', 'Конан']).
+list(sharingan, ['Учиха Саске', 'Хатаки Какаши', 'Учиха Мадара']).
+list(animal, ['Шима', 'Шукаку', 'Курама', 'Акамару']).
+list(bidju, ['Шукаку', 'Курама']).
+list(akatsuki, ['Орочимару', 'Джуго', 'Конан', 'Нагато']).
+list(red, ['Гаара', 'Харуно Сакура', 'Теруми Мей', 'Узумаки Кушина', 'Джуго', 'Нагато']).
+list(konoha, ['Узумаки Наруто', 'Учиха Саске', 'Хатаки Какаши', 'Орочимару', 'Учиха Мадара', 'Харуно Сакура', 'Джирайя', 'Майто Гай', 'Яманако Ино', 'Нара Шикамару', 'Цунаде', 'Узумаки Кушина', 'Курама', 'Инузука Киба', 'Акамару', 'Намиказе Минато', 'Узумаки Менма']).
+list(sannin, ['Узумаки Наруто', 'Учиха Саске', 'Орочимару', 'Харуно Сакура', 'Джирайя', 'Цунаде']).
+list(kage, ['Узумаки Наруто', 'Хатаки Какаши', 'Гаара', 'Теруми Мей', 'Цунаде', 'Намиказе Минато']).
+list(old, ['Орочимару', 'Джирайя', 'Шима', 'Цунаде', 'Курама', 'Шукаку']).
+list(beast, ['Узумаки Наруто', 'Учиха Саске', 'Хатаки Какаши', 'Орочимару', 'Гаара', 'Харуно Сакура', 'Джирайя', 'Темари', 'Цунаде', 'Инузука Киба', 'Намиказе Минато', 'Узумаки Менма']).
+list(dead, ['Учиха Мадара', 'Джирайя', 'Узумаки Кушина', 'Ооцуцуки Момошики', 'Намиказе Минато', 'Конан', 'Нагато']).
+list(characters, ['Узумаки Наруто', 'Учиха Саске', 'Хатаки Какаши', 'Орочимару', 'Учиха Мадара', 'Гаара', 'Харуно Сакура', 'Джирайя', 'Майто Гай', 'Яманака Ино', 'Нара Шикамару', 'Темари', 'Темури Мей', 'Шима', 'Шукаку', 'Цунаде', 'Узумаки Кушина', 'Курама', 'Джуго', 'Инузука Киба', 'Ооцуцуки Момошики', 'Акамару', 'Намиказе Минато', 'Узумаки Менма', 'Конан', 'Нагато']).
 
