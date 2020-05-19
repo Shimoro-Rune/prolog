@@ -1,0 +1,25 @@
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\Iz_9.exe.config
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\Iz_9.XML
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\Iz_9.exe
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\Iz_9.pdb
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\FSharp.Core.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\System.ValueTuple.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\FSharp.Core.xml
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\System.ValueTuple.xml
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\cs\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\de\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\en\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\es\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\fr\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\it\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\ja\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\ko\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\pl\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\pt-BR\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\ru\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\tr\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\zh-Hans\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\bin\Release\zh-Hant\FSharp.Core.resources.dll
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\obj\Release\Iz 9.fsproj.CopyComplete
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\obj\Release\Iz_9.exe
+C:\Users\Shimoro\source\repos\Iz 9\Iz 9\obj\Release\Iz_9.pdb
