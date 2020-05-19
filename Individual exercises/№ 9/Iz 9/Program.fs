@@ -3,12 +3,13 @@
 
 open System
 
+//Подсчет суммы цифр в числе
 let rec sumDigits a =
     match a with
     |0->0
     |_-> (sumDigits (a/10)) + (a%10)
 
-
+//Проверка на простоту
 let prime n =
     let rec isprime n m =
         if n=m then true
@@ -20,6 +21,7 @@ let prime n =
     |2->true
     |_->isprime n 2
 
+//Сколько раз цифра встречается в числе
 let rec Count i x k =
     if x<>0 then
         if x%10 = i then
@@ -29,6 +31,7 @@ let rec Count i x k =
     else
         k
 
+//Проверка на то, что число состоит из цифр от 1 до n без повторов
 let rec HasDifDigits n i x =
     if i<=n then
         if Count i x 0 <>1 then
@@ -37,24 +40,27 @@ let rec HasDifDigits n i x =
     else
         true
 
+//Генерация наибольшего числа, состоящего из цифр от 1 до n без повторов
 let rec GenerateStart n i k max =
     if i<=n then
         GenerateStart n (i+1) (k*10) (max+i*k)
     else
         max
 
+//Генерация наименьшего числа, состоящего из цифр от 1 до n без повторов
 let rec GenerateEnd n k min =
     if n>0 then
         GenerateEnd (n-1) (k*10) (min+n*k)
     else
         min
 
+//Генерация требуемого числа
 let rec GenerateNumb sumD max min n =
     let sum = sumDigits max
-    if (prime max = true && sum = sumD && HasDifDigits n 1 max) then
+    if (prime max = true && sum = sumD && HasDifDigits n 1 max) then //Проверка на простоту, соответствие суммы цифр и содержание только цифр от 1 до n без повторов
         max
     else
-        if (max-1)>min then
+        if (max-1)>min then //Проверка, не вышли ли мы за заданные границы, если вышли - значит, искомое число не существует
             GenerateNumb sumD (max-9) min n
         else
             0
