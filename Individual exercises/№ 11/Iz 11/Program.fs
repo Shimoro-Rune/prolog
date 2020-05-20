@@ -5,9 +5,10 @@ open System
 open System.Windows.Forms
 open System.Drawing
 
+//Создание формы
 let form = new Form(Width = 400, Height = 230, Text = "F# Program")
 
-
+//Создание элементов формы
 let button = new Button(Text = "Вычислить")
 let textBox1 = new TextBox()
 let textBox2 = new TextBox()
@@ -17,6 +18,7 @@ let label1 = new Label(Text = "Первое число")
 let label2 = new Label(Text = "Второе число")
 let label3 = new Label(Text= "Ответ")
 
+//Задание местоположения элементов формы
 button.Location <- new Point(147, 80)
 textBox1.Location <- new Point (20, 40)
 textBox2.Location <- new Point (250, 40)
@@ -26,11 +28,13 @@ label1.Location <- new Point (20, 20)
 label2.Location <- new Point (250, 20)
 label3.Location <- new Point (20, 130)
 
+//Добавление арифметических знаков в коллекцию
 comboBox1.Items.Add("+") |>ignore
 comboBox1.Items.Add("-") |>ignore
 comboBox1.Items.Add("*") |>ignore
 comboBox1.Items.Add("/") |>ignore
 
+//Добавление элементов на форму
 form.Controls.Add(button)
 form.Controls.Add(textBox1)
 form.Controls.Add(textBox2)
@@ -40,8 +44,7 @@ form.Controls.Add(label1)
 form.Controls.Add(label2)
 form.Controls.Add(label3)
 
-//button.Click.Add(fun evArgs -> MessageBox.Show("Click me") |> ignore)
-
+//Вычисление
 let Click evArgs : unit =
     if textBox1.Text.Length>0 && textBox2.Text.Length>0 then
         let x = System.Double.Parse(textBox1.Text)
@@ -66,6 +69,8 @@ let Click evArgs : unit =
     else
         MessageBox.Show("Введите числа!", "Внимание!") |> ignore
 
+//Добавление события для клика по кнопке
 button.Click.Add(Click)
 
+//Запуск формы
 Application.Run(form)
