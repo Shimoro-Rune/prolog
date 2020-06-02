@@ -40,7 +40,7 @@ let prime n =
     |_->isprime n 2
 
 
-let Iz14 list =
+let Iz12 list =
     let rec F list newL =
         let Del x newList =
             let rec D x d nL=
@@ -61,5 +61,5 @@ let Iz14 list =
     F list []
 
 [<EntryPoint>]
-let main argv = read_data |> Iz14 |> write_list
+let main argv = read_data |> Iz12 |> write_list
 
