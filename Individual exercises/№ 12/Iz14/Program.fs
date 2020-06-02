@@ -25,7 +25,8 @@ let rec write_list (list:int list) =
     match list with
     |[] -> let z=System.Console.ReadKey()
            0
-    |h::t -> System.Console.WriteLine(h.ToString())
+    |h::t -> System.Console.Write(h.ToString())
+             System.Console.Write(" ")
              write_list t
 
 let prime n =
@@ -42,21 +43,18 @@ let prime n =
 
 let Iz12 list =
     let rec F list newL =
-        let Del x newList =
-            let rec D x d nL=
+        let del x newL =
+            let rec D x d newL=
                 match d with
-                |1 -> nL
-                |_ -> if x%d=0 && prime d && findCount nL d = 0 then let n=nL@[d]
-                                                                     D x (d-1) n
-                                                                else D x (d-1) nL
-            match x with
-            |0 -> newList
-            |1 -> newList
-            |_ -> D x x newList
+                |1 -> newL
+                |_ -> if x%d=0 && prime d && findCount newL d = 0 then let n=newL@[d]
+                                                                       D x (d-1) n
+                                                                  else D x (d-1) newL
+            D x x newL
 
         match list with
         |[] -> newL
-        |head::tail -> let n=newL@[Del head newL]
+        |head::tail -> let n=del head newL
                        F tail n
     F list []
 
